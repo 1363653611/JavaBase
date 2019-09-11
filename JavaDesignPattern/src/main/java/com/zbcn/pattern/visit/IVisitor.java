@@ -1,7 +1,7 @@
 package com.zbcn.pattern.visit;
 
 /**        
- * Title: IVisitor.java
+ * Title: IVisitor.java8
  * <p>    
  * Description: 抽象访问者
  * @author likun       

@@ -1,7 +1,7 @@
 package com.zbcn.pattern.decorator;
 
 /**        
- * Title: Human.java
+ * Title: Human.java8
  * <p>    
  * Description: 被装饰者
  * @author likun       

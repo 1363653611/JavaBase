@@ -1,7 +1,7 @@
 package com.zbcn.pattern.adapt;
 
 /**        
- * Title: Target.java
+ * Title: Target.java8
  * <p>    
  * Description: 具体的目标类，只提供普通的功能
  * @author likun       

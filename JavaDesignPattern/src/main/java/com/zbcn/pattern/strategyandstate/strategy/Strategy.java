@@ -1,7 +1,7 @@
 package com.zbcn.pattern.strategyandstate.strategy;
 
 /**        
- * Title: Strategy.java
+ * Title: Strategy.java8
  * <p>    
  * Description: 策略模式的管理类
  * @author likun       

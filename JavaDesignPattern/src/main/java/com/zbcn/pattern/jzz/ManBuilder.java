@@ -4,7 +4,7 @@ import com.zbcn.pattern.jzz.cppojo.Man;
 import com.zbcn.pattern.jzz.cppojo.Person;
 
 /**        
- * Title: ManBuilder.java
+ * Title: ManBuilder.java8
  * <p>    
  * Description: 角色ConcreteBuilder
  * @author likun       

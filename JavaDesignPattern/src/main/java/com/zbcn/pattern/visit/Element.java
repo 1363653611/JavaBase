@@ -1,7 +1,7 @@
 package com.zbcn.pattern.visit;
 
 /**        
- * Title: Element.java
+ * Title: Element.java8
  * <p>    
  * Description: 抽象元素
  * @author likun       

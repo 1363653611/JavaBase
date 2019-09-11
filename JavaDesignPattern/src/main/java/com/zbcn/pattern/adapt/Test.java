@@ -1,7 +1,7 @@
 package com.zbcn.pattern.adapt;
 
 /**        
- * Title: Test.java
+ * Title: Test.java8
  * <p>    
  * Description: 测试适配器模式
  * @author likun       

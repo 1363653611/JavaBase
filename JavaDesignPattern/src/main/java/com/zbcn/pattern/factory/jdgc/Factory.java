@@ -5,7 +5,7 @@ import com.zbcn.pattern.factory.cppojo.BMW320;
 import com.zbcn.pattern.factory.cppojo.BMW523;
 
 /**        
- * Title: Factory.java
+ * Title: Factory.java8
  * <p>    
  * Description: 工厂方法，简单的工厂模式，导致工厂方法为全能类
  * @author likun       

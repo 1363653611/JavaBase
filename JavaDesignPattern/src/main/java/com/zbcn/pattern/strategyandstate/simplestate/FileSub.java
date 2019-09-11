@@ -1,7 +1,7 @@
 package com.zbcn.pattern.strategyandstate.simplestate;
 
 /**        
- * Title: FileSub.java
+ * Title: FileSub.java8
  * <p>    
  * Description: 策略控制类.
  * @author likun       

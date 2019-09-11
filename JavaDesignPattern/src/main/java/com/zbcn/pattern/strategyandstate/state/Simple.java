@@ -2,7 +2,7 @@ package com.zbcn.pattern.strategyandstate.state;
 
 
 /**        
- * Title: Simple.java
+ * Title: Simple.java8
  * <p>    
  * Description: 测试方法
  * @author likun       

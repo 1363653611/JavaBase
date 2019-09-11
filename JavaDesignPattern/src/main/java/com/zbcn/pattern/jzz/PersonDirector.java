@@ -3,7 +3,7 @@ package com.zbcn.pattern.jzz;
 import com.zbcn.pattern.jzz.cppojo.Person;
 
 /**        
- * Title: PersonDirector.java
+ * Title: PersonDirector.java8
  * <p>    
  * Description: 构造一个使用Builder接口的对象，指导构建过程
  * @author likun       

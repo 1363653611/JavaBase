@@ -1,7 +1,7 @@
 package com.zbcn.pattern.jzz.cppojo;
 
 /**        
- * Title: Person.java
+ * Title: Person.java8
  * <p>    
  * Description: 角色Product
  * @author likun       

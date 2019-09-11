@@ -3,7 +3,7 @@ package com.zbcn.pattern.jzz;
 import com.zbcn.pattern.jzz.cppojo.Person;
 
 /**        
- * Title: Test.java
+ * Title: Test.java8
  * <p>    
  * Description: 测试建造这模式
  * @author likun       

@@ -1,7 +1,7 @@
 package com.zbcn.pattern.visit;
 
 /**        
- * Title: ConcreteElement2.java
+ * Title: ConcreteElement2.java8
  * <p>    
  * Description: 具体元素类2
  * @author likun       

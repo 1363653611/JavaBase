@@ -1,7 +1,7 @@
 package com.zbcn.pattern.adapt;
 
 /**        
- * Title: Adaptee.java
+ * Title: Adaptee.java8
  * <p>    
  * Description: 已存在的，具有特殊功能，但不符合我们既有接口标准的类
  * @author likun       

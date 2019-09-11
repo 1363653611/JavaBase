@@ -3,7 +3,7 @@ package com.zbcn.pattern.factory.jdgc;
 import com.zbcn.pattern.factory.cppojo.BMW;
 
 /**        
- * Title: Customer.java
+ * Title: Customer.java8
  * <p>    
  * Description: 客户端
  * @author likun       

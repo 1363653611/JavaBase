@@ -1,7 +1,7 @@
 package com.zbcn.pattern.commond;
 
 /**        
- * Title: Command.java
+ * Title: Command.java8
  * <p>    
  * Description: 执行命令的接口
  * @author likun       

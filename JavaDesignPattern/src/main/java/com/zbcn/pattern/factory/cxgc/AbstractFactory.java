@@ -1,7 +1,7 @@
 package com.zbcn.pattern.factory.cxgc;
 
 /**        
- * Title: AbstractFactory.java
+ * Title: AbstractFactory.java8
  * <p>    
  * Description: 创建工厂的接口  
  * @author likun       

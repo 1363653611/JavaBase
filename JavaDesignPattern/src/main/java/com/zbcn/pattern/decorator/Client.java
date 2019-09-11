@@ -1,7 +1,7 @@
 package com.zbcn.pattern.decorator;
 
 /**        
- * Title: Client.java
+ * Title: Client.java8
  * <p>    
  * Description: 测试类，看一下你就会发现，跟java的I/O操作有多么相似
  * 1、Decorator抽象类中，持有Human接口，方法全部委托给该接口调用，

@@ -1,7 +1,7 @@
 package com.zbcn.pattern.mediator;
 
 /**        
- * Title: AbstractMediator.java
+ * Title: AbstractMediator.java8
  * <p>    
  * Description: 抽象的中介者
  * @author likun       

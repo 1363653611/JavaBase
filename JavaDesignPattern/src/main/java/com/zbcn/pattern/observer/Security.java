@@ -1,7 +1,7 @@
 package com.zbcn.pattern.observer;
 
 /**        
- * Title: Security.java
+ * Title: Security.java8
  * <p>    
  * Description: 具体的观察者：保镖
  * @author likun       

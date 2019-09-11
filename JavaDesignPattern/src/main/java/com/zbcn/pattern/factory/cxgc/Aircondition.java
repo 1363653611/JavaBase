@@ -1,7 +1,7 @@
 package com.zbcn.pattern.factory.cxgc;
 
 /**        
- * Title: Aircondition.java
+ * Title: Aircondition.java8
  * <p>    
  * Description: 空调以及型号
  * @author likun       

@@ -1,7 +1,7 @@
 package com.zbcn.pattern.strategyandstate.strategy;
 
 /**        
- * Title: IStrategy.java
+ * Title: IStrategy.java8
  * <p>    
  * Description: 定义所有支持的算法的公共接口抽象类
  * @author likun       

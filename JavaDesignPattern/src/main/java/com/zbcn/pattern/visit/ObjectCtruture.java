@@ -5,7 +5,7 @@ import java.util.List;
 import java.util.Random;
 
 /**        
- * Title: ObjectCtruture.java
+ * Title: ObjectCtruture.java8
  * <p>    
  * Description: 构造器
  * @author likun       

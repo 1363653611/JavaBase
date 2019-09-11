@@ -1,7 +1,7 @@
 package com.zbcn.pattern.strategyandstate.simplestate;
 
 /**        
- * Title: IState.java
+ * Title: IState.java8
  * <p>    
  * Description: 状态接口
  * @author likun       

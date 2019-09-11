@@ -1,7 +1,7 @@
 package com.zbcn.pattern.Propotype;
 
 /**        
- * Title: Client.java
+ * Title: Client.java8
  * <p>    
  * Description: 原型模式的测试
  * @author likun       

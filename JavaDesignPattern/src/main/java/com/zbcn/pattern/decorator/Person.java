@@ -1,7 +1,7 @@
 package com.zbcn.pattern.decorator;
 
 /**        
- * Title: Person.java
+ * Title: Person.java8
  * <p>    
  * Description: 定义被装饰者，被装饰者初始状态有些自己的装饰
  * @author likun       

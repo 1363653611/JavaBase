@@ -1,7 +1,7 @@
 package com.zbcn.pattern.commond;
 
 /**        
- * Title: Tv.java
+ * Title: Tv.java8
  * <p>    
  * Description: 命令的接收者Reciver（实际操作命令的人）
  * @author likun       

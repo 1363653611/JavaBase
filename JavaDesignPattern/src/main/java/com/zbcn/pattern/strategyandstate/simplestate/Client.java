@@ -1,7 +1,7 @@
 package com.zbcn.pattern.strategyandstate.simplestate;
 
 /**        
- * Title: Client.java
+ * Title: Client.java8
  * <p>    
  * Description: 测试客户端
  * @author likun       

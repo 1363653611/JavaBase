@@ -1,7 +1,7 @@
 package com.zbcn.pattern.observer;
 
 /**        
- * Title: Test.java
+ * Title: Test.java8
  * <p>    
  * Description: 测试类
  * @author likun       

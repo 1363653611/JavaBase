@@ -3,7 +3,7 @@ package com.zbcn.pattern.strategyandstate.state;
 import java.awt.Color;
 
 /**        
- * Title: State.java
+ * Title: State.java8
  * <p>    
  * Description: 状态的父类
  * @author likun       
