@@ -7,7 +7,6 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import java.io.*;
 
 /**
- * User: zhangqh6
  * Date: 2016/1/19 16:26:26
  */
 public class JsonUtils {

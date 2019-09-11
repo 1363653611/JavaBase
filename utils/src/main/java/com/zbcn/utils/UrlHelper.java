@@ -6,7 +6,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
- * Created by zhangquanhong on 2016/4/21.
+ * 2016/4/21.
  */
 public class UrlHelper {
 

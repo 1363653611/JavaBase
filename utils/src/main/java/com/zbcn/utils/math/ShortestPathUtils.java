@@ -4,9 +4,6 @@ import com.google.common.collect.Lists;
 
 import java.util.*;
 
-/**
- * Created by zhangquanhong on 2016/12/11.
- */
 public class ShortestPathUtils {
 
     public static <T> List<List<T>> search(T startPoint, T endPoint , Map<T, List<T>> accessibilityPathMap) {

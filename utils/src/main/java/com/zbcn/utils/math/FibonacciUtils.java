@@ -1,8 +1,5 @@
 package com.zbcn.utils.math;
 
-/**
- * Created by zhangquanhong on 2016/12/15.
- */
 public class FibonacciUtils {
 
     public static boolean isMatch(Long number){

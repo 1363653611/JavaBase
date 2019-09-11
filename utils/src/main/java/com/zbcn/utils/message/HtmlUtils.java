@@ -9,7 +9,6 @@ import java.io.File;
 import java.io.IOException;
 
 /**
- * User: zhangqh6
  * Date: 2015/11/24 22:14:14
  */
 public class HtmlUtils {

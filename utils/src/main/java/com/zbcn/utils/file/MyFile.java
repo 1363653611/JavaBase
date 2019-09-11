@@ -2,7 +2,7 @@ package com.zbcn.utils.file;
 
 /**
  * 服务器中，指定路径的文件映射而成的文件对象
- * @author zhangqh6
+ * @author
  *
  */
 public class MyFile {

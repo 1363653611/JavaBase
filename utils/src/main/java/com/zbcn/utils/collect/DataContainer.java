@@ -9,7 +9,6 @@ import java.util.*;
 
 /**
  * 数据容器
- * User: zhangqh6
  * Date: 2015/11/3 13:40:40
  */
 public class DataContainer<T> {

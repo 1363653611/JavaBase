@@ -17,7 +17,6 @@ import java.util.HashSet;
 import java.util.List;
 
 /**
- * User: zhangqh6
  * Date: 2016/1/21 13:28:28
  */
 public class XmlUtils {

@@ -3,9 +3,6 @@ package com.zbcn.utils.cmd;
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 
-/**
- * Created by zhangquanhong on 2016/8/25.
- */
 public class ShellExecutor {
 
     public static Process exeCmdAsync(String commandStr) {

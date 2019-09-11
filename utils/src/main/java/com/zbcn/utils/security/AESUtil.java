@@ -8,8 +8,6 @@ import javax.crypto.spec.SecretKeySpec;
 
 /**
  * Aes加密解密工具类
- *
- * Created by zqh on 15-3-25.
  */
 public class AESUtil {
 

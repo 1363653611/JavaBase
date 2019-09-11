@@ -8,7 +8,7 @@ import java.util.Date;
 import java.util.Random;
 
 /**
- * Created by Administrator on 14-4-29.
+ * 14-4-29.
  */
 public class CommonUtils {
 

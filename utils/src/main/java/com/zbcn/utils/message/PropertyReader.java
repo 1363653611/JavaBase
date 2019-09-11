@@ -3,7 +3,6 @@ package com.zbcn.utils.message;
 import java.util.*;
 
 /**
- * Created by zhangquanhong on 2017/4/27.
  */
 public class PropertyReader {
 

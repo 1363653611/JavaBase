@@ -3,8 +3,7 @@ package com.zbcn.utils.security;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 
-/**
- * Created by zhangquanhong on 2016/4/17.
+/**2016/4/17.
  */
 public class MD5Util {
 
