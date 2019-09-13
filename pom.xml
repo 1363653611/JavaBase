@@ -13,6 +13,7 @@
         <module>JavaDesignPattern</module>
         <module>JDK8</module>
         <module>utils</module>
+        <module>JvmTest</module>
     </modules>
     <properties>
         <log4j.version>1.2.17</log4j.version>
