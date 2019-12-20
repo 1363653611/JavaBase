@@ -17,7 +17,7 @@ public class Interrupt {
 		Thread sleep = new Thread(new SleepRunner(),"SleepRunner");
 		//sleep.setDaemon(true);
 		Thread busy = new Thread(new BusyRunner(),"BusyRunner");
-		busy.setDaemon(true);
+		busy.setDaemon(true); // busy 线程的停止是利用守护线程实现的,及main 线程停止,则busy线程终止
 		sleep.start();
 		busy.start();
 		try {
@@ -28,7 +28,7 @@ public class Interrupt {
 		}
 		//打断失败，抛出InterruptedException 异常
 		sleep.interrupt();
-		//busy.interrupt();
+		busy.interrupt();
 		System.out.println("SleepThread interrupted is " + sleep.isInterrupted());
 		System.out.println("BusyThread interrupted is " + busy.isInterrupted());
 		// 防止sleepThread和busyThread立刻退出
@@ -62,7 +62,7 @@ public class Interrupt {
 		public void run() {
 			// TODO Auto-generated method stub
 			while(true) {
-				
+
 			}
 		}
 		

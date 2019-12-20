@@ -1,4 +1,4 @@
-package com.zbcn.concurrency.multi;
+package com.zbcn.concurrency.base;
 
 import java.lang.management.ManagementFactory;
 import java.lang.management.ThreadInfo;
@@ -6,7 +6,7 @@ import java.lang.management.ThreadMXBean;
 
 /**
  * @ClassName: MultiThread
- * @Description: 多线程系列
+ * @Description: 多线程系列：java 天生是多线程程序，看起来一个main 线程，后台却同步运行多个线程
  * @author Administrator
  * @date 2019-06-26 17:02
  *

@@ -6,7 +6,7 @@ public class DaemonThread {
 
 	public static void main(String[] args) {
 		Thread thread = new Thread(new Daemon(),"daemon_runner");
-		thread.setDaemon(true);
+		thread.setDaemon(true); //在线程启动前设置
 		thread.start();
 		System.out.println("主线程结束");
 	}

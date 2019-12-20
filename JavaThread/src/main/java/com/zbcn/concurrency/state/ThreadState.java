@@ -1,5 +1,11 @@
 package com.zbcn.concurrency.state;
 
+/**
+ *  @title ThreadState
+ *  @Description 先使用 jps 获取当前运行的状态。然后用 jstack + 进程Id 。 查看当前线程状态
+ *  @author zbcn8
+ *  @Date 2019/11/28 18:48
+ */
 public class ThreadState {
 
 	public static void main(String[] args) {
