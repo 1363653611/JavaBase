@@ -54,14 +54,15 @@ public class CyclicBarrierTest implements Runnable {
 		for(Entry<String, Integer> sheet: map.entrySet()) {
 			result +=sheet.getValue();
 		}
-		System.out.println(result);
-		map.put("result", result);
+		System.out.println("最终结果：" + result);
+		//map.put("result", result);
+		executor.shutdown();//关闭线程池
 	}
 	
 	public static void main(String[] args) {
 		CyclicBarrierTest backWaterServer = new CyclicBarrierTest();
 		backWaterServer.count();
-		
+
 	}
 
 }

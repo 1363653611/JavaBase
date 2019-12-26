@@ -6,6 +6,8 @@ import java.util.concurrent.ForkJoinTask;
 import java.util.concurrent.RecursiveTask;
 
 /**
+ * 计算1+2+3+4的结果。
+ * 因为是有结果的任务，所以必须继承RecursiveTask
  * @author zbcn8
  */
 public class ForkJoinDemon extends RecursiveTask<Integer>{

@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:m="http://schemas.openxmlformats.org/officeDocument/2006/math" xmlns:r="http://schemas.openxmlformats.org/officeDocument/2006/relationships"><head><meta content="text/html; charset=utf-8" http-equiv="Content-Type" /><style><!--/*paged media */ div.header {display: none }div.footer {display: none } /*@media print { */@page { size: A4; margin: 10%; @top-center {content: element(header) } @bottom-center {content: element(footer) } }/*element styles*/ .del  {text-decoration:line-through;color:red;} .ins {text-decoration:none;background:#c0ffc0;padding:1px;}
+ /* TABLE STYLES */ 
+
+ /* PARAGRAPH STYLES */ 
+.DocDefaults {display:block;margin-top: 0in;margin-bottom: 0in;line-height: 100%;font-size: 10.5pt;}
+.a {display:block;text-align: justify;}
+.a3 {display:block;text-align: center;margin-top: 4mm;margin-bottom: 1mm;font-weight: bold;font-size: 16.0pt;}
+
+ /* CHARACTER STYLES */ span.a0 {display:inline;}
+--></style><script type="text/javascript"><!--function toggleDiv(divid){if(document.getElementById(divid).style.display == 'none'){document.getElementById(divid).style.display = 'block';}else{document.getElementById(divid).style.display = 'none';}}
+--></script></head><body>
+  
+  <!-- userBodyTop goes here -->
+  
+  
+  
+  <div class="document">
+  
+  <p class="a3 a DocDefaults "><span class="a0 " style="font-family: 'SimSun';">我的增量补丁整理软件</span></p>
+  
+  <p class="a DocDefaults " style="position: relative; text-indent: 7mm;line-height: 150%;"><span class="a0 " style="">章接前文<span class="" style="">，整理投产补丁是现在时常会做的事情，不仅仅是我个人，基本上整个组的，别的组的，还有你们指不定也是如此，</span>早就琢磨着写这么一款软件去实现自动生成补丁包的功能，核心处理是根据整理出来的补丁文件路径集去应用部署编译后的</span><span class="a0 " style="font-family: 'Calibri';">web</span><span class="a0 " style=""><span class="" style="">容器目录下复制和生成新文件的过程，</span>配方还是搞</span><span class="a0 " style="font-family: 'Calibri';">swing</span><span class="a0 " style=""><span class="" style="font-family: 'Calibri';white-space:pre-wrap;"> + </span></span><span class="" style="font-family: 'Calibri';">beautyeye_lnf</span><span class="a0 " style=""><span class="" style="">（主题）</span>，先从预览效果图开始，<span class="" style="">接着用功能点说明图来详细说明，你值得拥有。</span></span></p>
+  
+  <p class="a DocDefaults " style="position: relative; text-indent: 7mm;line-height: 150%;"><span class="a0 " style=""><span class="" style="">软件运行目录中除了“补丁整理自动化</span></span><span class="a0 " style="font-family: 'Calibri';">.exe</span><span class="a0 " style=""><span class="" style="">”为执行文件外，还包含</span></span><span class="a0 " style="font-family: 'Calibri';">config</span><span class="a0 " style="">与</span><span class="a0 " style="font-family: 'Calibri';">logs</span><span class="a0 " style=""><span class="" style="">目录，其中</span></span><span class="a0 " style="font-family: 'Calibri';">config</span><span class="a0 " style=""><span class="" style="">目录为软件运行的参数配置文件（包括</span></span><span class="a0 " style="font-family: 'Calibri';">conofig.properties</span><span class="a0 " style="">和</span><span class="a0 " style="font-family: 'Calibri';">replace.properties</span><span class="a0 " style="">）；</span><span class="a0 " style="font-family: 'Calibri';">logs</span><span class="a0 " style=""><span class="" style="">目录则是软件运行的日志记录，采用</span></span><span class="a0 " style="font-family: 'Calibri';">log4j</span><span class="a0 " style=""><span class="" style="">组件实现（</span></span><span class="a0 " style="font-family: 'Calibri';">20M</span><span class="a0 " style=""><span class="" style="">一个文件，一共可备份</span></span><span class="a0 " style="font-family: 'Calibri';">100</span><span class="a0 " style=""><span class="" style="">个，这些不是重点）</span><span class="" style="">，参考如下图：</span></span></p>
+  
+  <p class="a DocDefaults " style="text-align: center;line-height: 150%;"><span class="a0 " style=""><img height="94" id="rId7" src="我的增量补丁整理软件.html_files/bde255e5-2f7c-49df-a241-fc9f6a1f23ccimage1.png" width="415" /></span></p>
+  
+  <p class="a DocDefaults " style="position: relative; text-indent: 7mm;line-height: 150%;"><span class="a0 " style="">软件打开运行时有个根据</span><span class="a0 " style="font-family: 'Calibri';">eclipse</span><span class="a0 " style=""><span class="" style="">启动效果一样的无状态的窗口显示加载进度（在这里没啥用，因为没有一些需要提前初始化好的资源），</span>进度</span><span class="a0 " style="font-family: 'Calibri';">100%</span><span class="a0 " style=""><span class="" style="">后将显示主窗口，参考如下图：</span></span></p>
+  
+  <p class="a DocDefaults " style="text-align: center;line-height: 150%;"><span class="a0 " style=""><img height="239" id="rId8" src="我的增量补丁整理软件.html_files/bde255e5-2f7c-49df-a241-fc9f6a1f23ccimage2.png" width="374" /></span></p>
+  
+  <p class="a DocDefaults " style="text-align: center;line-height: 150%;"><span class="a0 " style=""><img height="316" id="rId9" src="我的增量补丁整理软件.html_files/bde255e5-2f7c-49df-a241-fc9f6a1f23ccimage3.png" width="415" /></span></p>
+  
+  <p class="a DocDefaults " style="text-align: center;line-height: 150%;"><span class="a0 " style=""><img height="313" id="rId10" src="我的增量补丁整理软件.html_files/bde255e5-2f7c-49df-a241-fc9f6a1f23ccimage4.png" width="415" /></span></p>
+  
+  <p class="a DocDefaults " style="text-align: center;line-height: 150%;"><span class="a0 " style=""><img height="314" id="rId11" src="我的增量补丁整理软件.html_files/bde255e5-2f7c-49df-a241-fc9f6a1f23ccimage5.png" width="415" /></span></p>
+  
+  <p class="a DocDefaults " style="text-align: center;line-height: 150%;"><span class="a0 " style=""><img height="313" id="rId12" src="我的增量补丁整理软件.html_files/bde255e5-2f7c-49df-a241-fc9f6a1f23ccimage6.png" width="415" /></span></p>
+  
+  <p class="a DocDefaults " style="text-align: center;line-height: 150%;"><span class="a0 " style=""><img height="223" id="rId13" src="我的增量补丁整理软件.html_files/bde255e5-2f7c-49df-a241-fc9f6a1f23ccimage7.png" width="415" /></span></p>
+  
+  <p class="a DocDefaults " style="text-align: center;line-height: 150%;"><span class="a0 " style=""><img height="223" id="rId14" src="我的增量补丁整理软件.html_files/bde255e5-2f7c-49df-a241-fc9f6a1f23ccimage8.png" width="415" /></span></p>
+  
+  <p class="a DocDefaults " style="line-height: 150%;"><span class="a0 " style="font-weight: bold;color: #C00000;">解析实现分析：</span></p>
+  
+  <p class="a DocDefaults " style="position: relative; text-indent: 7mm;line-height: 150%;"><span class="a0 " style="">在传统的</span><span class="a0 " style="font-family: 'Calibri';">WEB</span><span class="a0 " style=""><span class="" style="">工程中，代码在提交至</span></span><span class="a0 " style="font-family: 'Calibri';">SVN</span><span class="a0 " style="">后的路径为</span><span class="a0 " style="font-family: 'Calibri';">%PROJECT_HOME%/src/package/java</span><span class="a0 " style="">和</span><span class="a0 " style="font-family: 'Calibri';">%PROJECT_HOME%/WebContent/jsp or css/</span><span class="a0 " style="">等路径下<span class="" style="">，所有我们只需要根据这些路径的前缀解析即可</span><span class="" style="">，另外不排除还能有特殊情况，在实现时考虑了其它情况的实现，即按照路径直接解析输出，参考如下图所示：</span></span><span class="a0 " style="white-space:pre-wrap;"> </span></p>
+  
+  <p class="a DocDefaults " style="text-align: center;line-height: 150%;"> </p>
+  
+  <p class="a DocDefaults " style="line-height: 150%;"><span class="a0 " style="">整理</span><span class="a0 " style="font-family: 'Calibri';">java</span><span class="a0 " style=""><span class="" style="">文件实现：</span></span></p>
+  
+  <p class="a DocDefaults " style="position: relative; text-indent: 7mm;line-height: 150%;"><span class="a0 " style="">读取所有路径下的</span><span class="a0 " style="font-family: 'Calibri';">/src</span><span class="a0 " style=""><span class="" style="">前缀，其中以</span></span><span class="a0 " style="font-family: 'Calibri';">.java</span><span class="a0 " style="">文件结尾的<span class="" style="">文件需要特殊处理，将路径转换为对应的</span></span><span class="a0 " style="font-family: 'Calibri';">class</span><span class="a0 " style=""><span class="" style="">文件，且需要处理匿名内部类的情况，命名规则为公开类类名</span></span><span class="a0 " style="font-family: 'Calibri';">$1N.class</span><span class="a0 " style=""><span class="" style="">；如果在该路径下且不是</span></span><span class="a0 " style="font-family: 'Calibri';">.java</span><span class="a0 " style="">文件结尾的配置文件类的文件则同样是将路径转为</span><span class="a0 " style="font-family: 'Calibri';">/WEB-INF/classes</span><span class="a0 " style=""><span class="" style="">目录，去该目录中获取。</span></span></p>
+  
+  <p class="a DocDefaults " style="line-height: 150%;"><span class="a0 " style="">整理</span><span class="a0 " style="font-family: 'Calibri';">jsp</span><span class="a0 " style=""><span class="" style="">等资源文件实现：</span></span></p>
+  
+  <p class="a DocDefaults " style="position: relative; text-indent: 7mm;line-height: 150%;"><span class="a0 " style=""><span class="" style="">读取这些文件时，它们都是以</span></span><span class="a0 " style="font-family: 'Calibri';">WebContent</span><span class="a0 " style="">（</span><span class="a0 " style="font-family: 'Calibri';">WebRoot</span><span class="a0 " style=""><span class="" style="">）路径为前缀开始的，解析这种路径时需要将这个前缀给替换为“”，直接在与</span></span><span class="a0 " style="font-family: 'Calibri';">WEB-INF</span><span class="a0 " style="">统计目录下开始拷贝文件<span class="" style="">，直接拿文件路径去寻找，找到即拷贝</span>。</span></p>
+  
+  <p class="a DocDefaults " style="line-height: 150%;"><span class="a0 " style=""><span class="" style="">整理其它类型文件：</span></span></p>
+  
+  <p class="a DocDefaults " style="position: relative; text-indent: 7mm;line-height: 150%;"><span class="a0 " style=""><span class="" style="">由于各个系统的特殊性，可能除了</span></span><span class="a0 " style="font-family: 'Calibri';">/src</span><span class="a0 " style="">与</span><span class="a0 " style="font-family: 'Calibri';">/WebContent</span><span class="a0 " style=""><span class="" style="">目录外的其它目录，如在</span></span><span class="a0 " style="font-family: 'Calibri';">src</span><span class="a0 " style=""><span class="" style="">目录统计存在一些项目的帮助文档、数据库脚本等这些文件时，如果用户在列表中存在即给生成。</span></span></p>
+  
+  <p class="a DocDefaults " style="position: relative; text-indent: 7mm;line-height: 150%;"><span class="a0 " style="">鉴于考虑如上的</span><span class="a0 " style="font-family: 'Calibri';">3</span><span class="a0 " style=""><span class="" style="">中实现，特使用</span></span><span class="a0 " style="font-family: 'Calibri';">3</span><span class="a0 " style=""><span class="" style="">个实现类实现，</span></span><span class="a0 " style="font-family: 'Calibri';">SrcImpl</span><span class="a0 " style="">、</span><span class="a0 " style="font-family: 'Calibri';">WeRootImpl</span><span class="a0 " style=""><span class="" style="">（解析路径规则为匹配以</span></span><span class="a0 " style="font-family: 'Calibri';">/src</span><span class="a0 " style=""><span class="" style="">路径开始的路径），当它俩都匹配不上时则采用</span></span><span class="a0 " style="font-family: 'Calibri';">OtherImpl</span><span class="a0 " style="">去实现<span class="" style="">，可见“窗口设置”功能中的具体参数，提供设置</span></span><span class="a0 " style="font-family: 'Calibri';">class</span><span class="a0 " style="">文件匹配规则和</span><span class="a0 " style="font-family: 'Calibri';">WebContent</span><span class="a0 " style=""><span class="" style="">规则及其实现类，其它实现规则又支持自定义的路径字符串替换（后续加上的），基本上满足各类需求</span><span class="" style="">，当然这些生成的补丁文件均不包含被用户设置了已忽略的文件部分</span>。</span></p>
+  
+  <p class="a DocDefaults " style="position: relative; text-indent: 7mm;line-height: 150%;"><span class="a0 " style="font-weight: bold;color: #C00000;">支持</span><span class="a0 " style="font-weight: bold;color: #C00000;;font-family: 'Calibri';">maven</span><span class="a0 " style="font-weight: bold;color: #C00000;"><span class="" style="">项目的文件路径结果：</span></span></p>
+  
+  <p class="a DocDefaults " style="position: relative; text-indent: 7mm;line-height: 150%;"><span class="a0 " style="">由于目前的使用场景为普通</span><span class="a0 " style="font-family: 'Calibri';">WEB</span><span class="a0 " style=""><span class="" style="">项目，故在实现时并未考虑到</span></span><span class="a0 " style="font-family: 'Calibri';">maven</span><span class="a0 " style="">项目的提交至</span><span class="a0 " style="font-family: 'Calibri';">SVN</span><span class="a0 " style=""><span class="" style="">后的路径结构，不过之前的整理实现也是可以整理出</span></span><span class="a0 " style="font-family: 'Calibri';">java</span><span class="a0 " style="">文件或</span><span class="a0 " style="font-family: 'Calibri';">jsp</span><span class="a0 " style=""><span class="" style="">这些补丁的，需要我们在参数设置处将</span></span><span class="a0 " style="font-family: 'Calibri';">/src</span><span class="a0 " style="">修改为</span><span class="a0 " style="font-family: 'Calibri';">/src/main/java</span><span class="a0 " style=""><span class="" style="">，同时将</span></span><span class="a0 " style="font-family: 'Calibri';">/WebContent</span><span class="a0 " style="">修改为</span><span class="a0 " style="font-family: 'Calibri';">/src/main/webapp</span><span class="a0 " style=""><span class="" style="">，虽然这两项参数可以通过软件设置，并且只需要设置一次，但是考虑到鉴于这种方式的配置文件没的搞，因为配置文件常常位于</span></span><span class="a0 " style="font-family: 'Calibri';">/src/main/resources</span><span class="a0 " style=""><span class="" style="">目录，使用</span></span><span class="a0 " style="font-family: 'Calibri';">OtherImpl</span><span class="a0 " style="">解析时在</span><span class="a0 " style="font-family: 'Calibri';">WEB-INF</span><span class="a0 " style=""><span class="" style="">同级目录并没存在这些文件，只有让用户手动的调整</span></span><span class="a0 " style="font-family: 'Calibri';">SVN</span><span class="a0 " style=""><span class="" style="">复制出来的补丁整理的路径，所以基于这个问题导致无法完美的支持</span></span><span class="a0 " style="font-family: 'Calibri';">maven</span><span class="a0 " style=""><span class="" style="">项目，才有了一个小小的更改，</span><span class="" style="">又加了一个参数解析替换功能，为自定义解析路径时的替换参数功能</span>，使得用户在对于不同的路径时可以自己定义替换规则，略微增加替换规则就可以支持</span><span class="a0 " style="font-family: 'Calibri';">maven</span><span class="a0 " style=""><span class="" style="">工程，这点还是非常令人欣喜的</span>。</span></p>
+  
+  <p class="a DocDefaults " style="position: relative; text-indent: 7mm;line-height: 150%;"><span class="a0 " style="font-weight: bold;color: #C00000;">本软件中涉及到的<span class="" style="">详细知识点：</span></span></p>
+  
+  <p class="a DocDefaults " style="position: relative; text-indent: 7mm;line-height: 150%;"><span class="" style="font-family: 'Calibri';">S</span><span class="a0 " style="font-family: 'Calibri';">wing</span><span class="a0 " style=""><span class="" style="">实现一个无关闭窗口的效果（或</span></span><span class="a0 " style="font-family: 'Calibri';">eclipse</span><span class="a0 " style=""><span class="" style="">启动效果，请在本站内搜索）；</span></span></p>
+  
+  <p class="a DocDefaults " style="position: relative; text-indent: 7mm;line-height: 150%;"><span class="" style="font-family: 'Calibri';">S</span><span class="a0 " style="font-family: 'Calibri';">wing</span><span class="a0 " style="">的</span><span class="a0 " style="font-family: 'Calibri';">Mac</span><span class="a0 " style=""><span class="" style="">风格窗口皮肤的使用；</span></span></p>
+  
+  <p class="a DocDefaults " style="position: relative; text-indent: 7mm;line-height: 150%;"><span class="a0 " style=""><span class="" style="">软件运行时的图片路径访问的实现；</span></span></p>
+  
+  <p class="a DocDefaults " style="position: relative; text-indent: 7mm;line-height: 150%;"><span class="a0 " style=""><span class="" style="">软件运行于含有中文或空格的路径中的路径实现；</span></span></p>
+  
+  <p class="a DocDefaults " style="position: relative; text-indent: 7mm;line-height: 150%;"><span class="a0 " style="">相关的配置文件放置与软件</span><span class="a0 " style="font-family: 'Calibri';">exe</span><span class="a0 " style=""><span class="" style="">的同级目录的访问；</span></span></p>
+  
+  <p class="a DocDefaults " style="position: relative; text-indent: 7mm;line-height: 150%;"><span class="" style="font-family: 'Calibri';">L</span><span class="a0 " style="font-family: 'Calibri';">og4j</span><span class="a0 " style=""><span class="" style="">的运行输出目录为软件的运行目录；</span></span></p>
+  
+  <p class="a DocDefaults " style="position: relative; text-indent: 7mm;line-height: 150%;"><span class="a0 " style="">含有倒计时功能的</span><span class="a0 " style="font-family: 'Calibri';">alert</span><span class="a0 " style=""><span class="" style="">提示窗口；</span></span></p>
+  
+  <p class="a DocDefaults " style="position: relative; text-indent: 7mm;line-height: 150%;"><span class="a0 " style=""><span class="" style="">系统最小化至托盘的实现；</span></span></p>
+  
+  <p class="a DocDefaults " style="position: relative; text-indent: 7mm;line-height: 150%;"><span class="a0 " style="">最小化托盘实现时的鼠标悬浮提示和右键菜单的乱码问题解决；</span></p>
+  
+  <p class="a DocDefaults " style="position: relative; text-indent: 7mm;line-height: 150%;"><span class="a0 " style=""><span class="" style="">鼠标点击超链接打开网页的实现；</span></span></p>
+  
+  <p class="a DocDefaults " style="position: relative; text-indent: 7mm;line-height: 150%;"><span class="a0 " style="">右键功能菜单<span class="" style="">的实现；</span></span></p>
+  
+  <p class="a DocDefaults " style="position: relative; text-indent: 7mm;line-height: 150%;"><span class="a0 " style="">读取</span><span class="a0 " style="font-family: 'Calibri';">csv</span><span class="a0 " style="">、</span><span class="a0 " style="font-family: 'Calibri';">txt</span><span class="a0 " style="">、</span><span class="a0 " style="font-family: 'Calibri';">xls</span><span class="a0 " style="">、</span><span class="a0 " style="font-family: 'Calibri';">xlsx</span><span class="a0 " style=""><span class="" style="">的实现；</span></span></p>
+  
+  <p class="a DocDefaults " style="position: relative; text-indent: 7mm;line-height: 150%;"><span class="a0 " style="">使用</span><span class="a0 " style="font-family: 'Calibri';">exe4j</span><span class="a0 " style="">将</span><span class="a0 " style="font-family: 'Calibri';">jar</span><span class="a0 " style="">文件打包成</span><span class="a0 " style="font-family: 'Calibri';">exe</span><span class="a0 " style=""><span class="" style="">的过程；</span></span></p>
+  
+  <p class="a DocDefaults " style="position: relative; text-indent: 7mm;line-height: 150%;"> </p>
+  
+  <p class="a DocDefaults " style="position: relative; text-indent: 7mm;line-height: 150%;"><span class="a0 " style=""><span class="" style="">本软件基本在各种情况下进行了验证，如在正式使用时可先按需手工整理一份补丁</span>，再采用软件生成<span class="" style="">一份，通过</span></span><span class="a0 " style="font-family: 'Calibri';">beyond compare</span><span class="a0 " style=""><span class="" style="">（设置忽略时间戳、二进制比较规则）进行</span>对比<span class="" style="">，可以查看到生成出来的补丁具体有没有问题，是否符合要求等</span>。<span class="" style="">特别需要注意在生成补丁前最好先更新最新的代码，并进行编译输出至</span></span><span class="a0 " style="font-family: 'Calibri';">WEB</span><span class="a0 " style="">容器中。</span></p>
+  
+  <p class="a DocDefaults " style="position: relative; text-indent: 7mm;line-height: 150%;"><span class="a0 " style="font-weight: bold;color: #C00000;"><span class="" style="">软件下载：</span></span></p>
+  
+  <p class="a DocDefaults " style="position: relative; text-indent: 7mm;line-height: 150%;"><span class="" style="font-family: 'Calibri';">……</span></p></div>
+  
+  
+  
+  
+  
+  
+  
+  <!-- userBodyTail goes here -->
+  
+  </body></html>
