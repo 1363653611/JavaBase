@@ -5,8 +5,15 @@
      - 
    - 目录：
    
-     - java线程相关知识: [javaThread](JavaThread/readme.md);
-     - 设计模式: [javaDesignPattern](JavaDesignPattern/readme.md)
-     - jdk8的范例:[jdk8](JDK8/readme.md)
-     - 常用utils 工具类:[utils](utils/readme.md)
-     - jvm 学习: [jvmTest](JvmTest/readme.md)
+     - javaThread java线程相关知识: [javaThread](JavaThread/readme.md);
+     - javaDesignPattern 设计模式: [javaDesignPattern](JavaDesignPattern/readme.md)
+     - JDK8 jdk8的范例:[jdk8](JDK8/readme.md)
+     - utils 常用utils 工具类:[utils](utils/readme.md)
+     - jvmTest jvm 学习: [jvmTest](JvmTest/readme.md)
+     - lucene 搜索引擎 lucene
+     - javaOffice word 文档操作示例
+     
+     
+   - 工具
+    - common包
+    - utils 包
