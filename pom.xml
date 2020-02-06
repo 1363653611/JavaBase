@@ -17,6 +17,7 @@
         <module>javaOffice</module>
         <module>javaWeb</module>
         <module>Lucene</module>
+        <module>algorithm</module>
     </modules>
     <properties>
         <log4j.version>1.2.17</log4j.version>
