@@ -12,3 +12,8 @@
 /Lucene/Lucene.iml
 /javaOffice/javaOffice.iml
 /common/target/
+/common/common.iml
+/algorithm/algorithm.iml
+/generalJava/target/classes/
+/algorithm/target/classes/com/zbcn/structure/
+/demos/target/classes/com/zbcn/jwt/
