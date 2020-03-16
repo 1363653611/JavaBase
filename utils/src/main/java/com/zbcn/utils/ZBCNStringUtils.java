@@ -1,7 +1,4 @@
 package com.zbcn.utils;
-
-//import com.ourangel.box.common.mysql.MySqlFieldType;
-
 import org.apache.commons.lang3.StringUtils;
 
 import java.io.ByteArrayOutputStream;

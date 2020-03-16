@@ -4,6 +4,7 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import org.apache.commons.lang3.StringUtils;
 
+import java.io.FileNotFoundException;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -48,7 +49,7 @@ public class FunctionTest {
         System.out.println("name：" + StringUtils.join(names,","));
     }
 
-    private static <T,R> List<R> mapRight(List<T> list,Function<R,T> function){
+    private static <T,R> List<R> mapRight(List<T> list,Function<T,R> function){
         List<R> objects = new ArrayList<>();
         list.forEach( t->{
             objects.add(function.apply(t));

@@ -27,9 +27,12 @@ public class ConsumerTest {
         list.add(1);
         list.add(3);
 
-        dispList.accept(list);
+        //dispList.accept(list);
+        //System.out.println();
         // using addThen()
-        modify.andThen(dispList).accept(list);
-        //dispList.andThen(dispList).accept(list);
+//        System.out.println();
+//        modify.andThen(dispList).accept(list);
+       // System.out.println();
+        dispList.andThen(modify).accept(list);
     }
 }

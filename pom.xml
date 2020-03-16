@@ -11,7 +11,6 @@
     <modules>
         <module>JavaThread</module>
         <module>JavaDesignPattern</module>
-        <module>JDK8</module>
         <module>utils</module>
         <module>JvmTest</module>
         <module>javaOffice</module>
