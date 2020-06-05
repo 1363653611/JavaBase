@@ -17,5 +17,12 @@
 /generalJava/target/classes/
 /algorithm/target/classes/com/zbcn/structure/
 /demos/target/classes/com/zbcn/jwt/
+/algorithm/target/classes/com/zbcn/
+/demos/target/classes/com/zbcn/
+/demos/demos.iml
+/generalJava/generalJava.iml
 /JavaBase.iml
 /JavaDesignPattern/JavaDesignPattern.iml
+/JavaThread/JavaThread.iml
+/JvmTest/JvmTest.iml
+/utils/utils.iml

@@ -56,7 +56,7 @@
         <dependency>
             <groupId>cglib</groupId>
             <artifactId>cglib</artifactId>
-            <version>yy-2.0</version>
+            <version>3.3.0</version>
         </dependency>
 
         <!--http 相关-->
@@ -70,7 +70,7 @@
         <dependency>
             <groupId>com.zbcn</groupId>
             <artifactId>utils</artifactId>
-            <version>1.0-SNAPSHOT</version>
+            <version>1.0.0-SNAPSHOT</version>
         </dependency>
         <!--common 包-->
         <dependency>
