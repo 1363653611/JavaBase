@@ -1,3 +1,5 @@
+    GOF
+
 1.简单的工厂模式：
 	1.SIMPLE FACTORY
 	2.FACTORY FACTORY

@@ -38,6 +38,6 @@ public class SingletonExample5 {
     }
 
     public static void main(String[] args) {
-
+        SingletonExample5 singleton = Singleton.INSTANCE.getSingleton();
     }
 }
