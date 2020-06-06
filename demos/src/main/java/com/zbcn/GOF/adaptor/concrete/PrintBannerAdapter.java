@@ -1,7 +1,6 @@
 package com.zbcn.GOF.adaptor.concrete;
 
 import com.zbcn.GOF.adaptor.interfaces.Print;
-import sun.security.mscapi.PRNG;
 
 public class PrintBannerAdapter implements Print {
 
