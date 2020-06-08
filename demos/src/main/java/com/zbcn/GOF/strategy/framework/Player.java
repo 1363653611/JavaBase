@@ -1,0 +1,51 @@
+package com.zbcn.GOF.strategy.framework;
+
+import com.zbcn.GOF.strategy.concrete.Hand;
+
+/**
+ *  @title Player
+ *  @Description 策略容器
+ *  @author zbcn8
+ *  @Date 2020/6/8 16:22
+ */
+public class Player {
+
+    private String name;
+
+    private Strategy strategy;
+
+    private int wincount;
+
+    private int losecount;
+
+    private int gamecount;
+
+    public Player(String name, Strategy strategy) {
+        this.name = name;
+        this.strategy = strategy;
+    }
+
+    public Hand nextHand(){
+        return strategy.nextHand();
+    }
+
+    public void win(){
+        strategy.study(true);
+        wincount ++;
+        gamecount ++;
+    }
+    public void lose(){
+        strategy.study(false);
+        losecount ++;
+        gamecount ++;
+    }
+
+    public void even(){
+        gamecount ++;
+    }
+
+    @Override
+    public String toString(){
+        return "[" + name + ":"  + gamecount + " games, " + wincount + "win, " + losecount + " lose " + "]";
+    }
+}
