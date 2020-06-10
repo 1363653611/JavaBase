@@ -1,6 +1,5 @@
 package com.zbcn.GOF.composite;
 
-import com.zbcn.GOF.builder.framework.Director;
 import com.zbcn.GOF.composite.concrete.Directory;
 import com.zbcn.GOF.composite.concrete.File;
 
