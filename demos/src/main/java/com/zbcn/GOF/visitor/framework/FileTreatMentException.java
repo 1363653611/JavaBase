@@ -1,10 +1,10 @@
-package com.zbcn.GOF.composite.framework;
+package com.zbcn.GOF.visitor.framework;
 
 /**
  *  @title FileTreatMentException
- *  @Description add 方法抛出异常
+ *  @Description 自定义文件操作异常类
  *  @author zbcn8
- *  @Date 2020/6/9 18:55
+ *  @Date 2020/6/11 9:05
  */
 public class FileTreatMentException extends RuntimeException {
 
