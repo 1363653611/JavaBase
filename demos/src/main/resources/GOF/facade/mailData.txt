@@ -1,0 +1,3 @@
+driver=mysql
+name=test
+pwd=12345
