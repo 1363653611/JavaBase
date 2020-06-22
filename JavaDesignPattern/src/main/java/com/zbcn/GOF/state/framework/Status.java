@@ -12,7 +12,7 @@ public interface Status {
      * 设置时间
      * @param context
      */
-    void doClock(Context context,int hour);
+    void doClock(Context context, int hour);
 
     /**
      * 使用金库

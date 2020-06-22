@@ -11,5 +11,16 @@
 
     <artifactId>JavaDesignPattern</artifactId>
 
-
+    <dependencies>
+        <dependency>
+            <groupId>com.zbcn</groupId>
+            <artifactId>common</artifactId>
+            <version>1.0.0-SNAPSHOT</version>
+        </dependency>
+        <dependency>
+            <groupId>com.zbcn</groupId>
+            <artifactId>utils</artifactId>
+            <version>1.0.0-SNAPSHOT</version>
+        </dependency>
+    </dependencies>
 </project>
