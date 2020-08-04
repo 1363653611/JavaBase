@@ -41,7 +41,7 @@ public class FutureTaskDeamon {
 		// 创建线程池（使用了预定义的配置）
         ExecutorService executor = Executors.newCachedThreadPool();
         executor.execute(futureTask);
-    
+
         try {
         	//该方法是一个阻塞方法
 			Integer integer = futureTask.get();

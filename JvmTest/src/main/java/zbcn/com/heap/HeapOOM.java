@@ -4,7 +4,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * -Xms20m -Xmx20m -XX:+HeapDumpONOutOfMemoryError
+ *
+ * 堆内存溢出测试
+ * -Xms20m -Xmx20m -XX:+HeapDumpOnOutOfMemoryError
  */
 public class HeapOOM {
 

@@ -10,10 +10,9 @@ public class DumplicateTest {
     /**
      * 长度为n的数组里的所有数字都在0到n-1的范围内。查出数组中某个重复的数据
      * @param nums
-     * @param length
      * @param duplication
      */
-    public static boolean duplicate(int[] nums,int length,int[] duplication){
+    public static boolean duplicate(int[] nums, int[] duplication){
         //1.非法的输入，则返回false
         if(nums == null && nums.length <=0 ){
           return false;
@@ -53,7 +52,7 @@ public class DumplicateTest {
     public static void main(String[] args) {
         int[] i = {2,3,1,0,2,5,3};
         int[] temp = new int[10];
-        boolean duplicate = duplicate(i, i.length, temp);
+        boolean duplicate = duplicate(i, temp);
         System.out.println( temp[0] + "is duplicate :" + duplicate);
     }
 }
