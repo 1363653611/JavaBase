@@ -26,8 +26,9 @@ public class SemaphoreExample1 {
         for (int i = 0; i < threadNumber; i++) {
             final int num = i;
             exec.execute(() ->{
-                semaphore4(semaphore, num);
-                //semaphore2(semaphore, num);
+               // semaphore4(semaphore, num);
+                //semaphore(semaphore, num);
+                semaphore2(semaphore, num);
             });
         }
 
