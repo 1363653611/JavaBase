@@ -27,3 +27,7 @@
 /JvmTest/JvmTest.iml
 /utils/utils.iml
 /demos/target/classes/
+/NettyDemo/target/
+/algorithm/target/classes/META-INF/
+/NettyDemo/NettyDemo.iml
+/demos/target/maven-status/maven-compiler-plugin/compile/default-compile/
