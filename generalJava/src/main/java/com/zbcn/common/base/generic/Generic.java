@@ -17,7 +17,7 @@ import lombok.extern.slf4j.Slf4j;
 //        }
 //}
 //在实例化泛型类时，必须指定T的具体类型
-    @Slf4j
+@Slf4j
 public class Generic <T> {
 
     //key这个成员变量的类型为T,T的类型由外部指定

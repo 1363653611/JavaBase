@@ -1,4 +1,4 @@
-package com.zbcn.string;
+package com.zbcn.common.string;
 
 /**
  *  String 字符串创建相关说明
