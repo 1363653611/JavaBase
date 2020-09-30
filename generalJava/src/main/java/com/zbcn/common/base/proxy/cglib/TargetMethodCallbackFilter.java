@@ -40,8 +40,6 @@ public class TargetMethodCallbackFilter implements CallbackFilter {
             System.out.println("filter saySeeYou == 2");
             return 2;
         }
-
-
         return 0;
     }
 
