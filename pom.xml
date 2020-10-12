@@ -18,6 +18,7 @@
         <module>algorithm</module>
         <module>demos</module>
         <module>NettyDemo</module>
+        <module>TomcatWebEmbedded</module>
     </modules>
     <properties>
         <log4j.version>1.2.17</log4j.version>
