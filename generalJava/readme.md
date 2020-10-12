@@ -20,11 +20,15 @@
 - socket
     + deadlock
     + frameMessage
+    + http
+    + mail
     + nio
     + pool
     + tcp
     + udp
+    + rmi 远程方法调用(Remote Method Invocation) 一种用于实现远程过程调用(RPC)(Remote procedure call)的Java API
 - event - 事件监听机制
+- guava
     
 - **jdk8 特有属性**
     + date
@@ -36,7 +40,7 @@
     + stream
     + sync
 - joda - 时间处理包
-- jackson
+- jackson  jsonnode
 
 ---
 优秀的网页：https://www.hollischuang.com/archives/188
