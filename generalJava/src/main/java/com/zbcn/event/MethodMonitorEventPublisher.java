@@ -18,6 +18,10 @@ public class MethodMonitorEventPublisher {
 
     private List<MethodMonitorEventListener> listeners = new ArrayList<>();
 
+    /**
+     * 发布事件
+     * @throws InterruptedException
+     */
     public void methodMonitor() throws InterruptedException {
         MethodMonitorEvent eventObject = new MethodMonitorEvent(this);
         publishEvent(begin,eventObject);
