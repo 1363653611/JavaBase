@@ -1,0 +1,7 @@
+set WEBAPP_HOME=C:\Users\zbcn8\Desktop\script\czsb_new
+set WEBLOGIC_HOME=D:\tomcat\tomcat-7-oracle\webapps\ROOT
+del %WEBLOGIC_HOME%\WEB-INF\web.xml
+del %WEBLOGIC_HOME%\WEB-INF\classes\log4j.properties
+del %WEBLOGIC_HOME%\WEB-INF\classes\log4j.xml
+copy %WEBAPP_HOME%\log4j2.xml %WEBLOGIC_HOME%\WEB-INF\classes\
+copy %WEBAPP_HOME%\web.xml %WEBLOGIC_HOME%\WEB-INF

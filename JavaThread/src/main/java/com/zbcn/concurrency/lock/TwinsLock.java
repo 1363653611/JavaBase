@@ -20,6 +20,7 @@ public class TwinsLock implements Lock {
 	public void lock() {
 		// TODO Auto-generated method stub
 		sync.acquireShared(1);
+
 	}
 
 	@Override

@@ -52,25 +52,21 @@ public class Mutex implements Lock {
 	private final Sync sync = new Sync(); 
 	@Override
 	public void lock() {
-		// TODO Auto-generated method stub
 		sync.acquire(1);
 	}
 
 	@Override
 	public void lockInterruptibly() throws InterruptedException {
-		// TODO Auto-generated method stub
 		sync.acquireInterruptibly(1);
 	}
 
 	@Override
 	public boolean tryLock() {
-		// TODO Auto-generated method stub
 		return sync.tryAcquire(1);
 	}
 
 	@Override
 	public boolean tryLock(long time, TimeUnit unit) throws InterruptedException {
-		// TODO Auto-generated method stub
 		return sync.tryAcquireNanos(1, unit.toNanos(time));
 	}
 
@@ -83,13 +79,12 @@ public class Mutex implements Lock {
 
 	@Override
 	public Condition newCondition() {
-		// TODO Auto-generated method stub
 		return sync.newCondition();
 	}
 	
 	/**
 	 * @Title: hasQueuedThreads
-	 * @Description: TODO
+	 * @Description: 队列中是否有线程在等待获取
 	 * @return
 	 */
 	public boolean hasQueuedThreads() { 
