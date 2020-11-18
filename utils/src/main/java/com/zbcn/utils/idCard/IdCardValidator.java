@@ -8,12 +8,12 @@ import java.util.GregorianCalendar;
 import java.util.regex.Pattern;
 
 /**
- *  @title IdCardValidator
- *  @Description 身份证号校验
+ *  身份证号校验类
+ *  <br/>
  *  @author zbcn8
- *  @Date 2020/6/10 10:44
+ *  @since  2020/10/20 16:14
  */
-public class IdcardValidator {
+public class IdCardValidator {
 
     /**
      * 省，直辖市代码表： { 11:"北京",12:"天津",13:"河北",14:"山西",15:"内蒙古",
@@ -33,6 +33,7 @@ public class IdcardValidator {
             { "61", "陕西" }, { "62", "甘肃" }, { "63", "青海" }, { "64", "宁夏" },
             { "65", "新疆" }, { "71", "台湾" }, { "81", "香港" }, { "82", "澳门" },
             { "91", "国外" } };
+
     private String cityCode[] = { "11", "12", "13", "14", "15", "21", "22",
             "23", "31", "32", "33", "34", "35", "36", "37", "41", "42", "43",
             "44", "45", "46", "50", "51", "52", "53", "54", "61", "62", "63",
@@ -43,13 +44,14 @@ public class IdcardValidator {
     // 第18位校检码
     private String verifyCode[] = { "1", "0", "X", "9", "8", "7", "6", "5",
             "4", "3", "2" };
+
     /**
      * 验证所有的身份证的合法性
      *
      * @param idcard
      * @return
      */
-    public boolean isValidatedAllIdcard(String idcard) {
+    public boolean isValidatedAllIdCard(String idcard) {
         if (idcard.length() == 15) {
             idcard = this.convertIdcarBy15bit(idcard);
         }
@@ -109,14 +111,10 @@ public class IdcardValidator {
         }
 
         if (null != c) {
-            int bit[] = new int[idcard17.length()];
-
+            int bit[];
             bit = converCharToInt(c);
-
             int sum17 = 0;
-
             sum17 = getPowerSum(bit);
-
             // 将和值与11取模得到余数进行校验码判断
             checkCode = getCheckCodeBySum(sum17);
             if (null == checkCode) {
@@ -141,7 +139,6 @@ public class IdcardValidator {
         if (idcard.length() != 15) {
             return false;
         }
-
         // 是否全都为数字
         if (isDigital(idcard)) {
             String provinceid = idcard.substring(0, 2);
@@ -149,7 +146,6 @@ public class IdcardValidator {
             int year = Integer.parseInt(idcard.substring(6, 8));
             int month = Integer.parseInt(idcard.substring(8, 10));
             int day = Integer.parseInt(idcard.substring(10, 12));
-
             // 判断是否为合法的省份
             boolean flag = false;
             for (String id : cityCode) {
@@ -166,28 +162,24 @@ public class IdcardValidator {
             try {
                 birthdate = new SimpleDateFormat("yyMMdd").parse(birthday);
             } catch (ParseException e) {
-                e.printStackTrace();
+                throw new RuntimeException("出生日期解析失败。",e);
             }
             if (birthdate == null || new Date().before(birthdate)) {
                 return false;
             }
-
             // 判断是否为合法的年份
             GregorianCalendar curDay = new GregorianCalendar();
             int curYear = curDay.get(Calendar.YEAR);
             int year2bit = Integer.parseInt(String.valueOf(curYear)
                     .substring(2));
-
             // 判断该年份的两位表示法，小于50的和大于当前年份的，为假
             if ((year < 50 && year > year2bit)) {
                 return false;
             }
-
             // 判断是否为合法的月份
             if (month < 1 || month > 12) {
                 return false;
             }
-
             // 判断是否为合法的日期
             boolean mflag = false;
             curDay.setTime(birthdate); // 将该身份证的出生日期赋于对象curDay
@@ -236,7 +228,6 @@ public class IdcardValidator {
         if (idcard.length() != 15) {
             return null;
         }
-
         if (isDigital(idcard)) {
             // 获取出生年月日
             String birthday = idcard.substring(6, 12);
@@ -244,32 +235,26 @@ public class IdcardValidator {
             try {
                 birthdate = new SimpleDateFormat("yyMMdd").parse(birthday);
             } catch (ParseException e) {
-                e.printStackTrace();
+                throw new RuntimeException("出生日期解析失败。",e);
             }
             Calendar cday = Calendar.getInstance();
             cday.setTime(birthdate);
             String year = String.valueOf(cday.get(Calendar.YEAR));
-
             idcard17 = idcard.substring(0, 6) + year + idcard.substring(8);
-
             char c[] = idcard17.toCharArray();
             String checkCode = "";
-
             if (null != c) {
                 int bit[] = new int[idcard17.length()];
-
                 // 将字符数组转为整型数组
                 bit = converCharToInt(c);
                 int sum17 = 0;
                 sum17 = getPowerSum(bit);
-
                 // 获取和值与11取模得到余数进行校验码
                 checkCode = getCheckCodeBySum(sum17);
                 // 获取不到校验位
                 if (null == checkCode) {
                     return null;
                 }
-
                 // 将前17位与第18位校验码拼接
                 idcard17 += checkCode;
             }
@@ -411,27 +396,22 @@ public class IdcardValidator {
         return a;
     }
 
-    public static void main(String[] args) throws Exception {
-
-        String idcard15 = "";
-        String idcard18 = "120112196910050425";
-        IdcardValidator iv = new IdcardValidator();
-        boolean flag = false;
-        flag = iv.isValidate18Idcard(idcard18);
-        System.out.println(flag);
-        IdcardInfoExtractor idcardInfoExtractor = new IdcardInfoExtractor(idcard18);
-        System.out.println("年龄："+ idcardInfoExtractor.getAge() + "出生日期：" + idcardInfoExtractor.getBirthday() + "性别:" + idcardInfoExtractor.getGender() );
-        System.out.println(idcardInfoExtractor.toString());
-//        flag = iv.isValidate15Idcard(idcard15);
-//        System.out.println(flag);
+//    public static void main(String[] args) throws Exception {
 //
-//        System.out.println(iv.convertIdcarBy15bit(idcard15));
+//        String idcard15 = "310112850409522";
+//        String idcard18 = "";
+//        IdCardValidator iv = new IdCardValidator();
+//        boolean flag = false;
+//        flag = iv.isValidate18Idcard(idcard18);
+//        System.out.println("是否为18位："+ flag);
+//
+//        flag = iv.isValidate15Idcard(idcard15);
+//        System.out.println("是否为15位："+ flag);
+//
+//        System.out.println("15位转换为18位后："+ iv.convertIdcarBy15bit(idcard15));
 //        flag = iv.isValidate18Idcard(iv.convertIdcarBy15bit(idcard15));
-//        System.out.println(flag);
-
-        System.out.println(iv.isValidatedAllIdcard(idcard18));
-
-    }
-
+//        System.out.println("转换后的校验："+flag);
+//        System.out.println(iv.isValidatedAllIdCard(idcard15));
+//    }
 
 }
