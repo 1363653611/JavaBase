@@ -28,6 +28,9 @@ public class ResponseResult<T> implements Serializable {
 	 */
 	private T data;
 
+	public ResponseResult() {
+	}
+
 	private ResponseResult(Integer code, String status, String msg, T data) {
 		super();
 		this.code = code;
@@ -65,6 +68,17 @@ public class ResponseResult<T> implements Serializable {
 	 */
 	public static <T> ResponseResult<T> fail(Integer code,String status,String msg){
 		return new ResponseResult<T>(code, status, msg, null);
+	}
+
+	/**
+	 * 失败状态
+	 * @param apiStatus
+	 * @param msg
+	 * @param <T>
+	 * @return
+	 */
+	public static <T> ResponseResult<T> fail(ApiStatus apiStatus,String msg){
+		return fail(apiStatus.getCode(),apiStatus.getValue(),msg);
 	}
 
 	/**
