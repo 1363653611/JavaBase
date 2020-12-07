@@ -31,3 +31,5 @@
 /algorithm/target/classes/META-INF/
 /NettyDemo/NettyDemo.iml
 /demos/target/maven-status/maven-compiler-plugin/compile/default-compile/
+/TomcatWebEmbedded/target/classes/
+/TomcatWebEmbedded/src/main/resources/
