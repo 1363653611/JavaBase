@@ -49,9 +49,9 @@
             <version>8.3.1</version>
         </dependency>
         <dependency>
-            <groupId>org.elasticsearch</groupId>
-            <artifactId>elasticsearch-analysis-ik</artifactId>
-            <version>7.4.0</version>
+            <groupId>org.wltea.ik-analyzer</groupId>
+            <artifactId>ik-analyzer</artifactId>
+            <version>8.4.0</version>
         </dependency>
 
         <dependency>

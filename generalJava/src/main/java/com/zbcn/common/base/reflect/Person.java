@@ -7,6 +7,8 @@ import java.lang.reflect.Method;
 
 @Data
 public class Person {
+
+    private static String id = "123456";
     private String name;
     private int age;
     private String msg="hello wrold";

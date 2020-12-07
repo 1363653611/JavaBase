@@ -1,5 +1,7 @@
-package com.zbcn;
+package com.zbcn.test;
 
+import com.alibaba.fastjson.JSONArray;
+import com.alibaba.fastjson.JSONObject;
 import com.google.common.base.Predicate;
 import com.google.common.collect.Maps;
 import org.apache.commons.lang3.StringUtils;
@@ -11,6 +13,37 @@ import java.util.regex.Pattern;
 
 public class Test {
 	public static void main(String[] args) {
+
+		//test2();
+		//test();
+
+		int pow = pow(10, 3);
+		System.out.println(pow);
+	}
+
+
+	private static int pow(int x, int n){
+	    if(n == 0){
+	    	return 1;
+	    }
+	    int t = pow(x,n/2);
+	    if(n%2 != 0 ){
+			return x *t*t;
+	    }
+	    return t*t;
+	}
+
+
+	private static void test2() {
+		JSONArray jsonArray = new JSONArray();
+		JSONObject jsonObject = new JSONObject();
+		jsonObject.put("aaa", 0);
+		jsonObject.put("bbbb", "ssss");
+		jsonArray.add(jsonObject);
+		System.out.println(jsonArray.toJSONString());
+	}
+
+	private static void test() {
 		BigDecimal bigDecimal = new BigDecimal(2.54);
 		System.out.println(bigDecimal.toString());
 
