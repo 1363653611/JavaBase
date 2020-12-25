@@ -91,6 +91,26 @@ public class ResponseResult<T> implements Serializable {
 	}
 
 	/**
+	 * 未认证
+	 * @param msg
+	 * @param <T>
+	 * @return
+	 */
+	public static <T> ResponseResult<T> unauthorized(String msg){
+		return fail(ApiStatus.UNAUTHORIZED.getCode(),ApiStatus.UNAUTHORIZED.getValue(),msg);
+	}
+
+	/**
+	 * 拒绝：没有权限
+	 * @param msg
+	 * @param <T>
+	 * @return
+	 */
+	public static <T> ResponseResult<T> forbidden(String msg){
+		return fail(ApiStatus.FORBIDDEN.getCode(),ApiStatus.FORBIDDEN.getValue(),msg);
+	}
+
+	/**
 	 * @Title: fail
 	 * @Description: 失败原因，返回 exception 的报错信息
 	 * @param msg
