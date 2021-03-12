@@ -11,5 +11,7 @@ public class PredicateDemon {
         Predicate<String> s = (a) -> a.length()> 0;
         String b = "aaabbbbccc";
         System.out.println(s.test(b));
+        //求非
+        System.out.println(s.negate().test(b));
     }
 }

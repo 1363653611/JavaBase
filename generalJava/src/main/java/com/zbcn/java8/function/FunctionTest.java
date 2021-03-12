@@ -32,8 +32,10 @@ public class FunctionTest {
     }
     private static void consumeTest() {
         List<String> list = Arrays.asList("A", "B", "C", "D");
-        forEach(list,str->System.out.println(str));
-        forEach(list,System.out::println);
+        Consumer<String> printConsumer = (str)->System.out.println(str);
+        forEach(list,printConsumer);
+        Consumer<String> printConsumer2 =  System.out::println;
+        forEach(list,printConsumer2);
     }
 
     /**

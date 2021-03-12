@@ -1,7 +1,5 @@
 package com.zbcn.java8.function;
 
-import java.io.FileNotFoundException;
-
 /**
  * 函数接口
  *

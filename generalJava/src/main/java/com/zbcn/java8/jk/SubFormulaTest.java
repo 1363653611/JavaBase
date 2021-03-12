@@ -10,7 +10,6 @@ public class SubFormulaTest {
     public static void main(String[] args) {
 
         Formula formula = new Formula() {
-
             @Override
             public double calculate(int a) {
                 return sqrt(a);

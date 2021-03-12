@@ -30,6 +30,8 @@ public class LambdaDemon {
 //        });
 
         //Collections.sort(lists, (String o1,String o2) -> o1.compareTo(o2));
+        //Collections.sort(lists, (o1,o2) -> o1.compareTo(o2));
+        //Collections.sort(lists, String::compareTo);
         Collections.sort(lists, Comparator.naturalOrder());
         System.out.println(JSON.toJSONString(lists));
     }
