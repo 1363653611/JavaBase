@@ -14,7 +14,7 @@ public class JoinTest {
 
         JoinThread joinThread = new JoinThread();
         joinThread.start();
-        //睡眠时间不确定，应为不知道joinThread需要执行多长时间
+        //睡眠时间不确定，因为不知道joinThread需要执行多长时间
         try {
             joinThread.join();
             //Thread.sleep(1000);
@@ -22,14 +22,21 @@ public class JoinTest {
             e.printStackTrace();
         }
         System.out.println("我想当JoinThread对象执行完毕后我再执行");
-        test();
+        //test();
     }
 
     static class JoinThread extends Thread {
 
         @Override
         public void run(){
-            System.out.println("JoinThread 执行");
+            try {
+                System.out.println("JoinThread 开始执行");
+                //模拟等待时间
+                Thread.sleep(1000);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+            System.out.println("JoinThread 执行完成");
         }
 
     }
@@ -49,17 +56,6 @@ public class JoinTest {
 
 class A  implements Runnable{
 
-    /**
-     * When an object implementing interface <code>Runnable</code> is used
-     * to create a thread, starting the thread causes the object's
-     * <code>run</code> method to be called in that separately executing
-     * thread.
-     * <p>
-     * The general contract of the method <code>run</code> is that it may
-     * take any action whatsoever.
-     *
-     * @see Thread#run()
-     */
     @Override
     public void run() {
         try {
@@ -80,18 +76,6 @@ class B implements Runnable {
         this.a = a;
     }
 
-
-    /**
-     * When an object implementing interface <code>Runnable</code> is used
-     * to create a thread, starting the thread causes the object's
-     * <code>run</code> method to be called in that separately executing
-     * thread.
-     * <p>
-     * The general contract of the method <code>run</code> is that it may
-     * take any action whatsoever.
-     *
-     * @see Thread#run()
-     */
     @Override
     public void run() {
         try {

@@ -10,6 +10,7 @@ public class DaemonThread {
 
     public static void main(String[] args) throws InterruptedException {
         MyThread myThread = new MyThread();
+        //将myThread线程设置为守护线程
         myThread.setDaemon(true);
         myThread.start();
         Thread.sleep(5000);

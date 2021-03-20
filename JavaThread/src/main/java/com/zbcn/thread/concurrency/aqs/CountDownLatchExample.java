@@ -9,7 +9,8 @@ import java.util.concurrent.TimeUnit;
 
 /**
  * @Description: 同步辅助类，类似于阻塞当前线程
- *  1. 同时只有一个线程可以操作改计数器，调用await方法的类一直会处于阻塞状态，直到其他线程调用countDown方法，使
+ *  1. 同时只有一个线程可以操作改计数器，调用await方法的类一直会处于阻塞状态，
+ *  直到其他线程调用countDown方法，使
  *  countDownLanch 中的计数为 0 时才可以使当前线程执行
  *  2. countDownLanch 的计数只能初始化一次，初始化之后，再不能修改了
  * @Auther: zbcn

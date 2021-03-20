@@ -1,4 +1,4 @@
-package com.zbcn.concurrency.test;
+package com.zbcn.concurrency.lock;
 
 import java.util.concurrent.locks.Lock;
 

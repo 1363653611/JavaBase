@@ -10,7 +10,7 @@ public class PriorityTest {
 
     //线程优先级具有继承特性比如A线程启动B线程，则B线程的优先级和A是一样的。
     //
-    //线程优先级具有随机性也就是说线程优先级高的不一定每一次都先执行完。
+    //线程优先级具有随机性也就是说线程 优先级高 的不一定每一次 都先执行完。
     public static void main(String[] args) {
 
         System.out.println("main thread begin priority="

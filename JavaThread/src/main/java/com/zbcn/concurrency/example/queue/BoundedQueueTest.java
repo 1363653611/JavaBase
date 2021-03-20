@@ -1,4 +1,4 @@
-package com.zbcn.concurrency.test;
+package com.zbcn.concurrency.example.queue;
 
 
 import com.zbcn.concurrency.example.queue.BoundedQueue;

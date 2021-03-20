@@ -11,6 +11,7 @@ public class InterruptedTest extends Thread {
     @Override
     public void run(){
         for (int i = 0; i < 5000000; i++) {
+            //判断是否已经被执行打断标识
             if(this.isInterrupted()){
                 System.out.println("已经是停止状态了!我要退出了!");
                 break;
@@ -29,6 +30,7 @@ public class InterruptedTest extends Thread {
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
+        //打断....
         thread.interrupt();
 
     }

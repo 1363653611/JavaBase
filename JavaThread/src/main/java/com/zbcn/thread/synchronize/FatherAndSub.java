@@ -28,7 +28,7 @@ public class FatherAndSub {
 class Main{
     public int i = 10;
 
-    synchronized public void operatorMain(){
+     public synchronized void operatorMain(){
         try {
             i--;
             System.out.println("main print i=" + i);
@@ -41,7 +41,7 @@ class Main{
 
 
 class Sub extends Main{
-    synchronized public void operatorSub(){
+     public synchronized void operatorSub(){
         try {
             //调用父类
             this.operatorMain();

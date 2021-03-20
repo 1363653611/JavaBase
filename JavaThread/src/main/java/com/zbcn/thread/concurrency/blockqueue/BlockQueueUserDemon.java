@@ -30,17 +30,6 @@ class Producer implements Runnable{
         this.queue = queue;
     }
 
-    /**
-     * When an object implementing interface <code>Runnable</code> is used
-     * to create a thread, starting the thread causes the object's
-     * <code>run</code> method to be called in that separately executing
-     * thread.
-     * <p>
-     * The general contract of the method <code>run</code> is that it may
-     * take any action whatsoever.
-     *
-     * @see Thread#run()
-     */
     @Override
     public void run() {
         try {
@@ -60,21 +49,11 @@ class Consumer implements Runnable {
     public Consumer(BlockingQueue queue){
         this.queue = queue;
     }
-    /**
-     * When an object implementing interface <code>Runnable</code> is used
-     * to create a thread, starting the thread causes the object's
-     * <code>run</code> method to be called in that separately executing
-     * thread.
-     * <p>
-     * The general contract of the method <code>run</code> is that it may
-     * take any action whatsoever.
-     *
-     * @see Thread#run()
-     */
     @Override
     public void run() {
         try {
             System.out.println("consumer waiting");
+            //该方法会阻塞，直到能获取到值
             String take = queue.take();
             System.out.println("consumer take ->"+ take);
         } catch (InterruptedException e) {

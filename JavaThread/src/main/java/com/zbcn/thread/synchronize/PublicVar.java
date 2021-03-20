@@ -10,7 +10,7 @@ public class PublicVar {
     public String username = "A";
     public String password = "AA";
 
-    synchronized public void setValue(String name,String pwd){
+     public synchronized void setValue(String name,String pwd){
 
         try {
             this.username = name;
@@ -24,7 +24,7 @@ public class PublicVar {
 
     }
 
-    synchronized public void getValue() {
+     public synchronized void getValue() {
         System.out.println("getValue method thread name="
                            + Thread.currentThread().getName() + " username=" + username
                            + " password=" + password);
@@ -36,11 +36,11 @@ public class PublicVar {
             PublicVar publicVarRef = new PublicVar();
             ThreadC thread = new ThreadC(publicVarRef);
             thread.start();
-
-            Thread.sleep(200);//打印结果受此值大小影响
+            //打印结果受此值大小影响,如果不睡眠时间，可能主线程先执行，setValue方法后执行
+            Thread.sleep(200);
 
             publicVarRef.getValue();
-        } catch (InterruptedException e) {
+        } catch (Exception e) {
             // TODO Auto-generated catch block
             e.printStackTrace();
         }

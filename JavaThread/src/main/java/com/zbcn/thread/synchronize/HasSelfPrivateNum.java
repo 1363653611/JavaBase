@@ -10,7 +10,7 @@ public class HasSelfPrivateNum {
 
     private int num = 0;
 
-    synchronized public void addI(String userName) {
+     public synchronized void addI(String userName) {
         try {
             if (userName.equals("a")) {
                 num = 100;

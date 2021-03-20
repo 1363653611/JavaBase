@@ -36,6 +36,8 @@ public class WaitNotify {
 					try {
 						System.out.println(Thread.currentThread() + " flag is true. wait @ "
 								+ new SimpleDateFormat("HH:mm:ss").format(new Date()));
+						//调用wait 方法后，回释放到当前获取盗的锁，
+						// 直到 执行notify 方法的线程释放了线程后，重新获取该锁
 						lock.wait();
 					} catch (InterruptedException e) {
 //

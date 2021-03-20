@@ -43,13 +43,13 @@ class Servcie{
         }
     }
 
-    synchronized public static void printB() {
+     public static synchronized void printB() {
         System.out.println("线程名称为：" + Thread.currentThread().getName() + "在" + System.currentTimeMillis() + "进入printB");
         System.out.println("线程名称为：" + Thread.currentThread().getName() + "在" + System.currentTimeMillis() + "离开printB");
     }
 
-    //费静态方法，用实例锁
-    synchronized public void printC() {
+    //非静态方法，用实例锁
+     public synchronized void printC() {
         System.out.println("线程名称为：" + Thread.currentThread().getName() + "在" + System.currentTimeMillis() + "进入printC");
         System.out.println("线程名称为：" + Thread.currentThread().getName() + "在" + System.currentTimeMillis() + "离开printC");
     }

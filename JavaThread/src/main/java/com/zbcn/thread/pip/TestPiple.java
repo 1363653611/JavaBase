@@ -21,12 +21,14 @@ public class TestPiple {
         PipedOutputStream outputStream = new PipedOutputStream();
 
         try {
+            //连接输入输出管道
             outputStream.connect(inputStream);
+            //读取 inputStream 数据到 readData
             ThreadRead threadRead = new ThreadRead(readData, inputStream);
             threadRead.start();
 
             Thread.sleep(2000);
-
+            // 利用 writeData 往 outputStream 管道 写 数据
             ThreadWrite threadWrite = new ThreadWrite(writeData, outputStream);
             threadWrite.start();
 

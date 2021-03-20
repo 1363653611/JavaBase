@@ -28,11 +28,13 @@ public class CyclicBarrierTest implements Runnable {
 	
 	public void count() {
 		for(int i= 0; i<4; i++) {
+			int finalI = i;
 			executor.execute(new Runnable() {
 				
 				@Override
 				public void run() {
 					// 计算每个sheet 的内容的方法开始
+					System.out.println(Thread.currentThread().getName() + "开始执行：" + finalI);
 					map.put(Thread.currentThread().getName(), 1);
 					
 					//计算完成插入一个屏障
