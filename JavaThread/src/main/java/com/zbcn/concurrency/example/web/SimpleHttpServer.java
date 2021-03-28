@@ -2,19 +2,13 @@ package com.zbcn.concurrency.example.web;
 
 import com.zbcn.concurrency.example.threadpool.DefaultThreadPool;
 import com.zbcn.concurrency.example.threadpool.ThreadPool;
+import lombok.extern.slf4j.Slf4j;
+import org.apache.commons.lang3.StringUtils;
 
-import java.io.BufferedReader;
-import java.io.ByteArrayInputStream;
-import java.io.ByteArrayOutputStream;
-import java.io.Closeable;
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.IOException;
-import java.io.InputStream;
-import java.io.InputStreamReader;
-import java.io.PrintWriter;
+import java.io.*;
 import java.net.ServerSocket;
 import java.net.Socket;
+import java.util.Objects;
 
 /**
  * @ClassName: SimpleHttpServer
@@ -23,6 +17,7 @@ import java.net.Socket;
  * @date 2019-07-01 16:10
  *
  */
+@Slf4j
 public class SimpleHttpServer {
 	
 	//处理http请求的线程池
@@ -48,6 +43,7 @@ public class SimpleHttpServer {
 	
 	// 启动SimpleHttpServer
 	public static void start() throws Exception {
+		//创建一个socket 服务端
 		serverSocket = new ServerSocket(port);
 		Socket socket = null;
 		while ((socket = serverSocket.accept()) != null) {
@@ -69,45 +65,49 @@ public class SimpleHttpServer {
 		
 		@Override
 		public void run() {
-			// TODO Auto-generated method stub
-			String line = null;
 			BufferedReader br = null;
 			BufferedReader reader = null;
 			PrintWriter out = null;
 			InputStream in = null;
-			
 			try {
 				reader = new BufferedReader(new InputStreamReader(socket.getInputStream()));
 				//请求头
-				String header = reader.readLine();
+				String line = reader.readLine();
+				String header = null;
+				while (StringUtils.isNotBlank(line)){
+					log.info("客户短发送信息：{}", line);
+					//读取第一行为header
+					line = reader.readLine();
+					if(StringUtils.isBlank(header)){
+
+					}
+				}
 				//由相对路径计算出绝对路径
-				String filePath = basePath + header.split(" ")[1];
+				String filePath = basePath + File.separator + header;
 				out = new PrintWriter(socket.getOutputStream());
 				// 如果请求资源的后缀为jpg或者ico，则读取资源并输出
-				if(filePath.endsWith("jpg") || filePath.endsWith("ico")) {
-					in = new FileInputStream(filePath);
-					ByteArrayOutputStream baos = new ByteArrayOutputStream();
-					int i = 0;
-					while ((i = in.read())!= -1) {
-						baos.write(i);
-					}
-					byte[] array = baos.toByteArray();
+				if(header.endsWith(".jpg") || header.endsWith(".ico")) {
+					in = System.in;
+					reader = new BufferedReader(new InputStreamReader(in));
+					String str = reader.readLine();
+					out.write(str);
 					out.println("HTTP/1.1 200 OK");
 					out.println("Server: Molly");
 					out.println("Content-Type: image/jpeg");
-					out.println("Content-Length: " + array.length);
+					out.println("Content-Length: " + StringUtils.length(str));
 					out.println("");
-					socket.getOutputStream().write(array, 0, array.length);
 				}else {
-					br = new BufferedReader(new InputStreamReader(new
-							FileInputStream(filePath)));
+					br = new BufferedReader(new InputStreamReader(System.in));
 					out = new PrintWriter(socket.getOutputStream());
 					out.println("HTTP/1.1 200 OK");
 					out.println("Server: Molly");
 					out.println("Content-Type: text/html; charset=UTF-8");
 					out.println("");
 					while ((line = br.readLine()) != null) {
-					out.println(line);
+						if(line.equals("exit")){
+							break;
+						}
+						out.write(line);
 					}
 					out.flush();
 				}
@@ -127,7 +127,10 @@ public class SimpleHttpServer {
 			if (closeables != null) {
 				for (Closeable closeable : closeables) {
 					try {
-						closeable.close();
+						if(Objects.nonNull(closeable)){
+							closeable.close();
+						}
+
 					} catch (Exception ex) {
 						ex.printStackTrace();
 					}
@@ -135,5 +138,13 @@ public class SimpleHttpServer {
 			}
 		}
 		
+	}
+
+	public static void main(String[] args) {
+		try {
+			SimpleHttpServer.start();
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
 	}
 }
