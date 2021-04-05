@@ -9,7 +9,7 @@ import org.apache.commons.lang3.StringUtils;
  *  @author zbcn8
  *  @since  2021/3/22 17:11
  */
-public class StringDemo_02 {
+public class T2_StringDemo {
 
     public static void main(String[] args) {
         String str = "we are happy";

@@ -5,7 +5,7 @@ package com.zbcn.algorithm;
  *  @author zbcn8
  *  @since  2021/3/22 10:04
  */
-public class FibonacciDemo {
+public class T7_FibonacciDemo {
 
     /**
      *  通用公式 F[n]=F[n-1]+F[n-2] (n>=2,F[0]=0,F[1]=1)

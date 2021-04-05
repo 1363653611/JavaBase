@@ -9,7 +9,7 @@ import java.util.Stack;
  *  @author zbcn8
  *  @since  2021/3/23 15:10
  */
-public class LinkedDemo_03 {
+public class T3_LinkedDemo {
 
     /**
      * 链表节点信息

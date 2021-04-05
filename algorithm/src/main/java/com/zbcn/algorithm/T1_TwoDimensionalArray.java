@@ -9,7 +9,7 @@ package com.zbcn.algorithm;
  * @author zbcn8
  * @since 2021/3/22 11:30
  */
-public class TwoDimensionalArray_01 {
+public class T1_TwoDimensionalArray {
 
     /**
      *  1, 2, 8,  9
