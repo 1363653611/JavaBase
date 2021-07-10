@@ -185,7 +185,7 @@ public class T3_LinkedDemo {
     public static void main(String[] args) {
         LinkNode linkNode = new LinkNode(1);
         LinkNode preNode = linkNode;
-        for (int i = 1; i< 10; i++){
+        for (int i = 2; i< 10; i++){
             LinkNode current  = new LinkNode(i);
 //            if(i >5){
 //                current = new LinkNode(1);
@@ -194,7 +194,7 @@ public class T3_LinkedDemo {
             preNode = current;
         }
 
-        //LinkNode result = removeNode(linkNode, 1);
+        LinkNode result = removeNode(linkNode, 1);
         //LinkNode result = remove2(linkNode, 1);
         //LinkNode result = removeNodeUseStack(linkNode, 1);
         //reversePrint(linkNode);
