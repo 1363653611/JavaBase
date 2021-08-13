@@ -16,6 +16,7 @@
         <module>javaOffice</module>
         <module>Lucene</module>
         <module>algorithm</module>
+        <module>generalJava</module>
         <module>demos</module>
         <module>NettyDemo</module>
         <module>TomcatWebEmbedded</module>

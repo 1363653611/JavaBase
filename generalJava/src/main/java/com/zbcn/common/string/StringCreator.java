@@ -9,7 +9,8 @@ package com.zbcn.common.string;
 public class StringCreator {
 
     public static void main(String[] args) {
-        test3();
+//        test3();
+        test5();
     }
 
     private static void test1(){
@@ -51,5 +52,13 @@ public class StringCreator {
         String s2 = "abc";
         System.out.println(s1 == s2);// 输出 false,因为一个是堆内存，一个是常量池的内存，故两者是不同的。
         System.out.println(s1.equals(s2));// 输出 true
+    }
+
+    public static void test5(){
+        String s = new String("1");
+        s.intern();
+        String s2 = "1";
+
+        System.out.println(s == s2);
     }
 }
