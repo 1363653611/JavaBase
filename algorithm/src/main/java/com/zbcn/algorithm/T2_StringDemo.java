@@ -19,6 +19,12 @@ public class T2_StringDemo {
         System.out.println(s);
     }
 
+    /**
+     * 该方案存在问题：字符串中的每个字符都移动了多次，
+     * @param str
+     * @param replacer
+     * @return
+     */
     private static String replaceFunc(String str, String replacer) {
         if(StringUtils.isBlank(str)){
             return str;
