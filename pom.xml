@@ -18,6 +18,8 @@
         <module>algorithm</module>
         <module>generalJava</module>
         <module>demos</module>
+        <module>common</module>
+        <module>generalJava</module>
         <module>NettyDemo</module>
         <module>TomcatWebEmbedded</module>
     </modules>
