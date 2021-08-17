@@ -6,7 +6,7 @@ package com.zbcn.algorithm;
  *  @author zbcn8
  *  @since  2021/4/13 14:01
  */
-public class T11_DEL_LinkedNode {
+public class T12_DEL_LinkedNode {
 
     public static void main(String[] args) {
         ListNode head = new ListNode();

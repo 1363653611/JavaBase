@@ -6,7 +6,7 @@ package com.zbcn.algorithm;
  *  @author zbcn8
  *  @since  2021/5/4 15:49
  */
-public class T12_LinkedNodeReverse {
+public class T13_LinkedNodeReverse {
 
     public static void main(String[] args) {
         ListNode head = new ListNode();
