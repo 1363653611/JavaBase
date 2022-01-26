@@ -11,6 +11,7 @@ public class ShortestPathUtils {
         List<T> excludeList = new ArrayList<T>();
         search(startPoint, endPoint, accessibilityPathMap, result, excludeList, new ArrayList<T>());
         Collections.sort(result, new Comparator<List<T>>() {
+            @Override
             public int compare(List<T> o1, List<T> o2) {
                 return o1.size() - o2.size();
             }
