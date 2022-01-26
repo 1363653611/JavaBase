@@ -24,13 +24,13 @@ public class T13_LinkedNodeReverse {
 
     /**
      * 循环的方式反转链表
-     * @param heed
+     * @param head
      * @return
      */
-    public static ListNode reverseByLoop(ListNode heed){
+    public static ListNode reverseByLoop(ListNode head){
         ListNode pre= null;
         ListNode next;
-        ListNode curr = heed;
+        ListNode curr = head;
         while (curr != null){
             next = curr.next;
             curr.next = pre;
