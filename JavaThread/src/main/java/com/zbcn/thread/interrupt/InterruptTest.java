@@ -4,6 +4,7 @@ package com.zbcn.thread.interrupt;
  * 当方法wait()被执行后，锁自动被释放，但执行完notify()方法后，锁不会自动释放。
  * 必须执行完notify()方法所在的synchronized代码块后才释放
  * 当线程呈wait状态时，对线程对象调用interrupt方法会出现InterrupedException异常
+ * InterrupedException 异常抛出前，会先将线程的中断标志复原为false
  *
  * @author Administrator
  * @date 2018/11/9 0:26
@@ -17,6 +18,8 @@ public class InterruptTest {
             a.start();
             Thread.sleep(5000);
             a.interrupt();
+            //查看线程的中断状态
+            System.out.println("中断状态："+ a.isInterrupted());
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
