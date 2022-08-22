@@ -3,6 +3,7 @@ package com.zbcn.QLExpress;
 import com.ql.util.express.DefaultContext;
 import com.ql.util.express.ExpressRunner;
 import com.ql.util.express.Operator;
+import org.apache.commons.lang.StringUtils;
 
 import java.math.BigDecimal;
 import java.util.ArrayList;
@@ -13,10 +14,58 @@ public class Main {
     public static void main(String[] args) throws Exception {
         //test1();
         //test5();
-        test4();
+        //test8();
+        test9();
+        test10();
     }
 
+    private static void test10()  throws Exception {
+        String express = "(min(a,b) + c < 100 && 10<5) && 100 > 5";
+        ExpressRunner runner = new ExpressRunner();
+        DefaultContext<String, Object> context = new DefaultContext<String, Object>();
+        context.put("a",84);
+        context.put("b",80);
+        context.put("c",5);
+        Object execute = runner.execute(express, context, null, false, false, null);
+        System.out.println(execute);
+    }
+
+    private static void test9() throws Exception {
+        String express = "min(a,b) + c";
+        ExpressRunner runner = new ExpressRunner();
+        DefaultContext<String, Object> context = new DefaultContext<String, Object>();
+        context.put("a",84);
+        context.put("b",80);
+        context.put("c",5);
+        Object execute = runner.execute(express, context, null, false, false, null);
+        System.out.println(execute);
+    }
+
+
     /*************************************************Operator***************************************************/
+
+    private static void test7() throws Exception{
+        String express = " if (index<80) return \"优\"; else if(index>80 && index < 85)return \"良\"; else if(index>85) return \"差\";";
+        ExpressRunner runner = new ExpressRunner();
+        DefaultContext<String, Object> context = new DefaultContext<String, Object>();
+        context.put("index",84);
+        Object execute = runner.execute(express, context, null, false, false, null);
+        System.out.println(execute);
+    }
+
+    private static void test8() throws Exception{
+
+        String express = " if (best_logic) return \"优\"; else if(prefer_logic)return \"良\"; else if(bad_logic) return \"差\"; else return \"未知逻辑\"";
+        express = StringUtils.replace(express,"best_logic","index<80");
+        express = StringUtils.replace(express,"prefer_logic","index>80 && index<85");
+        express = StringUtils.replace(express,"bad_logic","index>85");
+
+        ExpressRunner runner = new ExpressRunner();
+        DefaultContext<String, Object> context = new DefaultContext<String, Object>();
+        context.put("index",10);
+        Object execute = runner.execute(express, context, null, false, false, null);
+        System.out.println(execute);
+    }
 
     /**
      * 替换 if then else 等关键字
