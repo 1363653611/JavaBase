@@ -112,4 +112,23 @@ public class Test {
 		});
 		return head;
 	}
+
+
+	// b 模式串， m 模式串长度
+	public static int[] getNext(int[] b, int m){
+
+		int[] next = new int[m];
+		next[0] = -1;
+		int k = -1;
+		for (int i = 1; i < m; ++i){// 从第二个字符开始循环 模式串
+			while (k != -1 && b[i] != b[k]){
+				k = next[k];
+			}
+			if (b[i] == b[k+1]){
+				++k;
+			}
+			next[i] = k;
+		}
+		return next;
+	}
 }
