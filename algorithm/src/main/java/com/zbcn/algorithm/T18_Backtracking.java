@@ -8,7 +8,6 @@ package com.zbcn.algorithm;
  */
 public class T18_Backtracking {
 
-
     /**
      * 我们有一个 8x8 的棋盘，希望往里放 8 个棋子（皇后），每个棋子所在的行、列、对角线
      * 都不能有另一个棋子
@@ -18,7 +17,7 @@ public class T18_Backtracking {
      */
     static class QueenAlm{
         /**
-         * 全局成员变量，下标表示行，值 表示 queue 存储在哪一列
+         * 全局成员变量，下标表示行，值 表示 queen 存储在哪一列
          */
         private int[] result = new int[8];
 
@@ -128,6 +127,14 @@ public class T18_Backtracking {
                 f(i+1,cw + items[i],items,n,w);
             }
 
+        }
+
+        public static void main(String[] args) {
+            int[] a = {10,20,5,25,46,22,30,42,13,66};
+            OneZeroPkg oneZeroPkg = new OneZeroPkg();
+            // 假设背包可承受重量 100，物品个数 10，物品重量存储在数组 a 中，那可以这样调用函数：
+            oneZeroPkg.f(0, 0, a, 10, 100);
+            System.out.println(oneZeroPkg.maxW);
         }
         
     }
