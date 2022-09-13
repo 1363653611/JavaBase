@@ -60,12 +60,42 @@ public class T20_LinkedTest {
 
     /**
      * 链表中环的检测
+     * 解题思路： 用快慢指针，一个走的快，一个走的慢，快指针最终会追上慢指针
      * @param head
      * @param <T>
      */
-    public static <T> void checkRing(LinkNode<T> head) {
-
+    public static <T> boolean circleCheck(LinkNode<T> head) {
+        if(head == null){
+            System.out.println("空链表，不存在回环");
+            return false;
+        }
+        // 快慢指针都从相同的位置开始
+        LinkNode fast = head;
+        LinkNode slow = head;
+        while (fast.next.next != null && slow.next != null){
+            slow = slow.next;
+            fast = fast.next.next;
+            if (slow == fast){
+                System.out.println("存在回环");
+                return true;
+            }
+        }
+        System.out.println("不存在回环");
+        return false;
     }
+
+    //两个有序的链表合并
+
+    /**
+     * 两个有序链表合并
+     * @param node1
+     * @param node2
+     * @return
+     */
+    public LinkNode mergeTwoLinkNodes(LinkNode node1, LinkNode node2){
+        return null;
+    }
+
 
 
 }
