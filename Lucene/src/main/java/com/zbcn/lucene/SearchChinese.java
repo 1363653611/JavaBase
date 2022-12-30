@@ -14,7 +14,7 @@ import org.apache.lucene.index.Term;
 import org.apache.lucene.search.*;
 import org.apache.lucene.store.Directory;
 import org.apache.lucene.store.FSDirectory;
-import org.wltea.analyzer.lucene.IKAnalyzer;
+//import org.wltea.analyzer.lucene.IKAnalyzer;
 
 import java.io.File;
 import java.io.IOException;
@@ -33,7 +33,13 @@ public class SearchChinese {
 	 */
 	public static void createIndex(String indexPath, String resourcePath) throws IOException {
 // 使用IK分词器
-		Analyzer analyzer = new IKAnalyzer();
+		//Analyzer analyzer = new IKAnalyzer();
+		Analyzer analyzer = new Analyzer() {
+			@Override
+			protected TokenStreamComponents createComponents(String s) {
+				return null;
+			}
+		};
 		Directory directory = FSDirectory.open(FileSystems.getDefault().getPath(indexPath));
 		IndexWriterConfig indexWriterConfig = new IndexWriterConfig(analyzer);
 		IndexWriter indexWriter = new IndexWriter(directory, indexWriterConfig);
