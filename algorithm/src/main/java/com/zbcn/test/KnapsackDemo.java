@@ -37,12 +37,12 @@ public class KnapsackDemo {
             }
             return;
         }
-        // 处理下一个物品
+        // 处理下一个物品， 选择不装 第 i 个物品
         f(i + 1, cw,items, n,w);
 
         // 处理当前物品,已经超过可以背包承受的重量时，就不要再装了
         if (cw + items[i] <= w){
-            // 找到最接近 w 的
+            // 找到最接近 w 的, 选择装 第 i 的物品
             f(i+1, cw + items[i],items,n,w);
         }
 
